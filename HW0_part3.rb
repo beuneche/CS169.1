@@ -13,7 +13,7 @@
 class BookInStock
     attr_accessor :isbn
     attr_accessor :price
-    
+
     def initialize(isbn, price)
         raise ArgumentError.new("ISBN is empty or not a string") if isbn == "" or ! isbn.is_a? String
         raise ArgumentError.new("price must be > 0") if price <= 0
@@ -22,7 +22,7 @@ class BookInStock
     end
 
     public
-    
+
     def price_as_string
         "$#{"%1.2f" % price}"
     end
