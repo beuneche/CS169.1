@@ -32,3 +32,4 @@ end
 book = BookInStock.new("2345dd", 20)
 puts book.price_as_string # => $3.80
 
+# End
