@@ -27,5 +27,3 @@ print sum_to_n?([14,5,16,7,9,11], 33) # => false
 print sum_to_n?([13], 13) # => false
 print sum_to_n?([1,0], 1) # => true
 
-
-
