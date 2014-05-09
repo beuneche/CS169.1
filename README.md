@@ -1,1 +1,1 @@
-Welcome to my HW EdX Repository !
+Welcome to my EdX Homework Repository !
