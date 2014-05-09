@@ -40,5 +40,3 @@ end
 
 puts binary_multiple_of_4?('0000101') # => ?
 
-
-
