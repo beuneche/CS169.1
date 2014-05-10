@@ -13,3 +13,4 @@ class Numeric
 end
 
 puts 10.euros
+
