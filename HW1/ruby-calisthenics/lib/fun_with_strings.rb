@@ -4,7 +4,10 @@ module FunWithStrings
     s == s.reverse
   end
   def count_words
-    # your code here
+    frequencies = Hash.new(0)
+    words = self.gsub(/\W" "/, "").downcase.split(" ")
+    words.each { |word| frequencies[word.gsub(/[^a-z]/, "")] += 1 }
+    frequencies.delete_if { |k,v| k.empty? }
   end
   def anagram_groups
     # your code here
@@ -15,5 +18,7 @@ end
 
 class String
   include FunWithStrings
-  puts "A man, a plan, a canal -- Panama".palindrome?
+  #puts "A man, a plan, a canal -- Panama".palindrome?
+  #puts "A man, a plan, a canal -- Panama!".count_words
+  puts "scream cars for four scar creams".anagram_groups
 end
