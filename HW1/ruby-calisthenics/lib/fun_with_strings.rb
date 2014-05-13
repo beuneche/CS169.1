@@ -10,7 +10,10 @@ module FunWithStrings
     frequencies.delete_if { |k,v| k.empty? }
   end
   def anagram_groups
-    # your code here
+    words = self.split(" ").group_by { |w| w.chars.sort}
+    words_group = Array.new(0)
+    words.each {|key, value| words_group.push(value)}
+    words_group
   end
 end
 
@@ -20,5 +23,5 @@ class String
   include FunWithStrings
   #puts "A man, a plan, a canal -- Panama".palindrome?
   #puts "A man, a plan, a canal -- Panama!".count_words
-  puts "scream cars for four scar creams".anagram_groups
+  puts "rcsmea scream cars for four scar creams".anagram_groups
 end
