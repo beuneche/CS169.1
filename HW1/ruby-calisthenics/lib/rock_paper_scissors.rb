@@ -15,12 +15,22 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
+    tournament
     # YOUR CODE HERE
   end
 
 end
+#puts RockPaperScissors.winner(['Armando','R'], ['Dave','S'])  # => ['Dave','S']
 
-puts RockPaperScissors.winner(['Armando','R'], ['Dave','S'])  # => ['Dave','S']
-
-
+tourney = [
+        [
+          [ ["Armando", "P"], ["Dave", "S"] ],
+          [ ["Richard", "R"], ["Michael", "S"] ]
+        ],
+        [
+          [ ["Allen", "S"], ["Omer", "P"] ],
+          [ ["David E.", "R"], ["Richard X.", "P"] ]
+        ]
+      ]
+puts RockPaperScissors.tournament_winner(tourney)
 
