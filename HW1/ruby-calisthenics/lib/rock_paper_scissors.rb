@@ -15,13 +15,30 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
-    tournament
-    # YOUR CODE HERE
+    quart_finale = Array.new(0)
+    demi_finale = Array.new(0)
+    finale = Array.new(0)
+    if tournament[0][0].is_a? Array
+    then
+    tournament.map do |poule|
+      poule.map do |tour|
+        quart_finale.push(self.winner(tour[0], tour[1]))
+      end
+      quart_finale.map do |finale|
+        demi_finale.push(finale)
+      end
+      finale.push(self.winner(demi_finale[0], demi_finale[1]))
+    end
+    else
+      finale = tournament
+    end
+    self.winner(finale[0], finale[1])
   end
 
 end
 #puts RockPaperScissors.winner(['Armando','R'], ['Dave','S'])  # => ['Dave','S']
 
+base = [["Armando", "P"], ["Dave", "S"]]
 tourney = [
         [
           [ ["Armando", "P"], ["Dave", "S"] ],
@@ -32,5 +49,6 @@ tourney = [
           [ ["David E.", "R"], ["Richard X.", "P"] ]
         ]
       ]
-puts RockPaperScissors.tournament_winner(tourney)
+#print RockPaperScissors.tournament_winner(tourney)
+print RockPaperScissors.tournament_winner(base)
 
